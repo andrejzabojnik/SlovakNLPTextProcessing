@@ -20,6 +20,9 @@ public class Main {
             if (parser.isTokenize()) {
                 textprocessor.tokenize(inputText);
             }
+            if (parser.isExtractSentences()) {
+                textprocessor.extractSentences(inputText);
+            }
         } catch (InvalidParametersException | InvalidFileException e) {
             System.err.println(e.getMessage());
         }
@@ -29,31 +32,3 @@ public class Main {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
