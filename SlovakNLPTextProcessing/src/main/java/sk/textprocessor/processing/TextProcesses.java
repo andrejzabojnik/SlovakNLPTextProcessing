@@ -41,11 +41,7 @@ public class TextProcesses {
                 dictionary = skr.isAbbreviation(word);
             }
 
-//          delenie textu na vety
-
-//          teraz sa deli text, ked konci veta cislovkou ale nemože sa začínať. Ak chceš aby sa mohla začínať, tak pridaj toto do podmienky.
-//          && (input.substring(i-1,i).matches("[a-z]")
-            if ((ch.matches("([!?.])(\\s)[A-Z]")) && !dictionary ) {
+            if ((ch.matches("([!?.])(\\s)[A-Z]")) && !dictionary && (input.substring(i-1,i).matches("[a-z]") ) {
                 sentenses.add(input.substring(sentense_last_char, i + 1));
                 sentense_last_char = i + 1;
             }
