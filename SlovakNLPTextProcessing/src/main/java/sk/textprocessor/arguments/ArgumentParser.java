@@ -12,6 +12,9 @@ public class ArgumentParser {
     @Parameter(names = "-token", description = "Tokenize text")
     private boolean tokenize = false;
 
+    @Parameter(names = "-extsents", description = "Extract sentences")
+    private boolean extractSentences = false;
+
     /*Pomocou parametra input možme vložit na spracovanie nejaký textovy dokument tým že zadame jeho nazov.*/
     @Parameter(names = "-input", description = "Input file")
     private String inputFile = "";
@@ -34,6 +37,10 @@ public class ArgumentParser {
     /*Funkcia pre zistenie či dany parameter bol zadany  */
     public boolean isTokenize() {
         return tokenize;
+    }
+
+    public boolean isExtractSentences() {
+        return extractSentences;
     }
 
     /*Funkcia vracia nazov suboru ktory bol zadany */
